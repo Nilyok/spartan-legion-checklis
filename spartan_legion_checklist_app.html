@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spartan Legion – Checklist</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI Emoji", "Segoe UI", Arial;
+      background: linear-gradient(to bottom, #0d0d12, #1a1a22);
+      color: #f5f5f7;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('https://images.unsplash.com/photo-1622973536968-3a3beea2981b') center/cover no-repeat;
+      border-bottom: 4px solid #e6c36d;
+      box-shadow: inset 0 0 80px #000;
+    }
+    header h1 {
+      font-size: 3.3rem;
+      margin: 0;
+      color: #ffe8a3;
+      text-shadow: 0 0 20px #000;
+    }
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #ffd978;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.2rem;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    label:hover {
+      transform: translateX(5px);
+      color: #ffdfa0;
+    }
+
+    input[type="checkbox"] {
+      width: 24px;
+      height: 24px;
+      accent-color: #ffdb7b;
+    }
+
+    .reset-btn {
+      background: #ffdb7b;
+      color: #000;
+      font-weight: bold;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .reset-btn:hover {
+      background: #ffe9ad;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.5;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>⚔️ Spartan Legion</h1>
+  <p>Honor • Strength • Brotherhood</p>
+</header>
+
+<div class="container">
+
+  <h2>⚔️ Combat Goals</h2>
+  <div class="section">
+    <label><input type="checkbox"> 🗡️ Clear Tales of the Martial World</label>
+    <label><input type="checkbox"> 💤 Clear Dreamblade Abyss</label>
+    <label><input type="checkbox"> 📜 Clear Martial World Chronicles</label>
+    <label><input type="checkbox"> 🌇 Clear Sundance City</label>
+    <label><input type="checkbox"> 👹 Defeat all weekly world bosses</label>
+    <label><input type="checkbox"> 🥇 Reach arena rank goal</label>
+    <label><input type="checkbox"> 🕒 Finish any Time Limited Events</label>
+  </div>
+
+  <h2>💎 Upgrades & Resources</h2>
+  <div class="section">
+    <label><input type="checkbox"> 🔧 Enhance Gear</label>
+    <label><input type="checkbox"> ⚙️ Upgrade Crafting Gear</label>
+    <label><input type="checkbox"> 🟩 Upgrade Socket Jades</label>
+    <label><input type="checkbox"> 💠 Upgrade Willpower</label>
+    <label><input type="checkbox"> 📈 Upgrade Skills</label>
+    <label><input type="checkbox"> 🛒 Spend weekly shop currencies</label>
+    <label><input type="checkbox"> 💰 Spend at market / guild store</label>
+    <label><input type="checkbox"> 🏡 Visit Manor & complete Farm</label>
+  </div>
+
+  <h2>👥 Guild Duties</h2>
+  <div class="section">
+    <label><input type="checkbox"> 📦 Guild Cargo</label>
+    <label><input type="checkbox"> 🧭 Rambler</label>
+    <label><input type="checkbox"> 🤝 Help guildmates daily</label>
+  </div>
+
+  <h2>🎯 Missions & Events</h2>
+  <div class="section">
+    <label><input type="checkbox"> 🎯 Complete season weekly missions</label>
+    <label><input type="checkbox"> 🗓️ Daily Check-in</label>
+    <label><input type="checkbox"> 🌬️ Complete Breathe Quests</label>
+    <label><input type="checkbox"> ⚖️ Use Vigor for Identity</label>
+    <label><input type="checkbox"> 🧳 Claim Travel rewards</label>
+    <label><input type="checkbox"> 🎁 Max NPC Gifting</label>
+  </div>
+
+  <h2>🪙 Prep for Next Week</h2>
+  <div class="section">
+    <label><input type="checkbox"> 🧮 Plan Vigor Spending</label>
+    <label><input type="checkbox"> 🧪 Restock potions & consumables</label>
+    <label><input type="checkbox"> 🛡️ Plan upgrades or builds</label>
+    <label><input type="checkbox"> 📰 Check patch notes & updates</label>
+  </div>
+
+  <button class="reset-btn" onclick="resetChecklist()">🔄 Reset All</button>
+
+</div>
+
+<footer>Spartan Legion © Honor in All Things</footer>
+
+<script>
+function resetChecklist() {
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+}
+</script>
+
+</body>
+</html>
